@@ -1,0 +1,26 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/css/CalculatorLayout.css" />
+    <title>Calculator @ViewData["Title"]</title>
+</head>
+
+<body>
+    <header>
+        <h1>Calculator - @ViewData["Title"]</h1>
+    </header> 
+
+    <div id="result-container">
+        <p>
+            Your Result Is:
+        </p>
+
+        @RenderBody()
+    </div>
+</body>
+</html>

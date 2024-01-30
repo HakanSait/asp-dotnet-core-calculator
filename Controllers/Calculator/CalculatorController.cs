@@ -2,51 +2,74 @@
 
 namespace asp_dotnet_core_calculator.Controllers.Calculator
 {
+    // Controller for the calculator
     [Route("calculator")]
     public class CalculatorController : Controller
     {
-        // Add two numbers given in query input
+        // Add two numbers given in the query string
         [HttpGet("add")]
-        public IActionResult Add([FromQuery] int a, [FromQuery] int b)
+        public IActionResult Add(double numberOne, double numberTwo)
         {
-            return Ok(a + b);
+            // Give the result to the view
+            ViewBag.Result = numberOne + numberTwo;
+            
+            // Return the view
+            return View();
         }
 
-        // Subtract two numbers given in query input
+        // Subtract two numbers given in the query string
         [HttpGet("subtract")]
-        public IActionResult Subtract(int a, int b)
+        public IActionResult Subtract(double numberOne, double numberTwo)
         {
-            return Ok(a - b);
+            // Give the result to the view
+            ViewBag.Result = numberOne - numberTwo;
+
+            // Return the view
+            return View();
         }
 
-        // Multiply two numbers given in query input
+        // Multiply two numbers given in the query string
         [HttpGet("multiply")]
-        public IActionResult Multiply(int a, int b)
+        public IActionResult Multiply(double numberOne, double numberTwo)
         {
-            return Ok(a * b);
+            // Give the result to the view
+            ViewBag.Result = numberOne * numberTwo;
+
+            // Return the view
+            return View();
         }
 
-        // Divide two numbers given in query input
+        // Divide two numbers given in the query string
         [HttpGet("divide")]
-        public IActionResult Divide(int a, int b)
+        public IActionResult Divide(double numberOne, double numberTwo)
         {
-            return Ok(a / b);
+            // Give the result to the view
+            ViewBag.Result = numberOne / numberTwo;
+
+            // Return the view
+            return View();
         }
 
-        // Power two numbers given in query input
+        // Power two numbers given in the query string
         [HttpGet("power")]
-        public IActionResult Power(int a, int b)
+        public IActionResult Power(double numberOne, double numberTwo)
         {
-            return Ok(System.Math.Pow(a, b));
+            // Give the result to the view
+            ViewBag.Result = System.Math.Pow(numberOne, numberTwo);
+
+            // Return the view
+            return View();
         }
 
-        // Square root of a number given in query input
+        // Root two numbers given in the query string
         [HttpGet("root")]
-        public IActionResult Root(int a, int b)
+        public IActionResult Root(double numberOne, double numberTwo)
         {
-            return Ok(System.Math.Pow(a, 1 / b);
-        }
+            // Give the result to the view
+            ViewBag.Result = System.Math.Pow(numberOne, 1 / numberTwo);
 
-        // This Code Is Not Done Yet
+            // Return the view
+            return View();
+        }
     }
 }

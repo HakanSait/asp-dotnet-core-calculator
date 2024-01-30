@@ -3,22 +3,21 @@
 namespace asp_dotnet_core_calculator.Controllers.Calculator
 {
     // Controller for the calculator
-    [Route("calculator")]
     public class CalculatorController : Controller
     {
         // Add two numbers given in the query string
-        [HttpGet("add")]
+        [HttpGet]
         public IActionResult Add(double numberOne, double numberTwo)
         {
             // Give the result to the view
             ViewBag.Result = numberOne + numberTwo;
-            
+
             // Return the view
             return View();
         }
 
         // Subtract two numbers given in the query string
-        [HttpGet("subtract")]
+        [HttpGet]
         public IActionResult Subtract(double numberOne, double numberTwo)
         {
             // Give the result to the view
@@ -29,7 +28,7 @@ namespace asp_dotnet_core_calculator.Controllers.Calculator
         }
 
         // Multiply two numbers given in the query string
-        [HttpGet("multiply")]
+        [HttpGet]
         public IActionResult Multiply(double numberOne, double numberTwo)
         {
             // Give the result to the view
@@ -40,7 +39,7 @@ namespace asp_dotnet_core_calculator.Controllers.Calculator
         }
 
         // Divide two numbers given in the query string
-        [HttpGet("divide")]
+        [HttpGet]
         public IActionResult Divide(double numberOne, double numberTwo)
         {
             // Give the result to the view
@@ -51,7 +50,7 @@ namespace asp_dotnet_core_calculator.Controllers.Calculator
         }
 
         // Power two numbers given in the query string
-        [HttpGet("power")]
+        [HttpGet]
         public IActionResult Power(double numberOne, double numberTwo)
         {
             // Give the result to the view
@@ -62,7 +61,7 @@ namespace asp_dotnet_core_calculator.Controllers.Calculator
         }
 
         // Root two numbers given in the query string
-        [HttpGet("root")]
+        [HttpGet]
         public IActionResult Root(double numberOne, double numberTwo)
         {
             // Give the result to the view
